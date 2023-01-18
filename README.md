@@ -17,5 +17,6 @@
   ### Features and Routes
 
   #### Tests
+  jest
 
   #### UML / Diagrams

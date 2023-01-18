@@ -1,8 +1,8 @@
 import React from 'react';
-import Categories from './Components/Categories/Categories';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import Products from './Components/Products/Products';
+import Categories from './Components/Categories';
+import Header from './Components/Header';
+import Products from './Components/Products';
+import Footer from './Components/Footer';
 
 
 const App = () => {

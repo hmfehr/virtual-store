@@ -3,7 +3,7 @@
 const Footer = () => {
   return(
     <>
-     <p>&copy2023; Hunter Fehr</p>
+     <p >&copy2023; Hunter Fehr</p>
     </>
   )
 }

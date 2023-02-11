@@ -10,7 +10,6 @@ const initialState = {
 
 const categoryReducer = (state = initialState, action) => {
   const { type, payload } = action
-  
   switch (type) {
     case 'SELECT_CATEGORY':
       return {
@@ -29,6 +28,6 @@ const categoryReducer = (state = initialState, action) => {
   }
 };
 
-export const addProducts = createAction
+// export const addProducts = createAction
 
 export default categoryReducer;

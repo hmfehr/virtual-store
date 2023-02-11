@@ -2,8 +2,8 @@ import React from 'react';
 import Categories from './Components/Categories';
 import Header from './Components/Header';
 import Products from './Components/Products';
-import Cart from './Components/SimpleCart'
 import Footer from './Components/Footer';
+import SimpleCart from './Components/SimpleCart';
 
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Categories />
       <Products />
-      <Cart />
+      <SimpleCart />
       <Footer />
     </>
   )

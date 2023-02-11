@@ -1,7 +1,7 @@
 // import { Button, Card } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import {Button, Card } from '@mui/material';
-import { removeItem, getProducts, adjustInventory } from '../../store/actions'
+import { addItem, getProducts, adjustInventory } from '../../store/actions'
 import { useEffect } from 'react';
 
 const Products = () => {
@@ -29,7 +29,7 @@ const Products = () => {
           key={`product-${index}`}
           variant='outlined'>
             {product.name}
-            <Button variant="text" onClick={() => {() => handler(product)}}>Add Item</Button>
+            <Button variant="text" onClick={() => handler(product)}>Add Item</Button>
         </Card>
       ))}
     </>

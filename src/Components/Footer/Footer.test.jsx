@@ -2,13 +2,12 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import Footer from '.';
 
-describe('Footer', () => {
+describe ('Footer', () => {
   test('renders as expected', () => {
-    render(<Footer />);
 
-    let footer = screen.getByText('footer');
+    let footer = screen.getByText('Hunter Fehr');
 
-    expect(footer).toHaveTextContent('Hunter Fehr');
-    expect(footer).toBeInTheDocument();
-  });
-});
+    expect(footer).toHaveTextContent('Hunter Fehr')
+    expect(footer)
+  })
+})

@@ -5,13 +5,15 @@ import { addItem, removeItem } from '../actions';
 describe('Cart reducer', () => {
   const reducers = combineReducers({
     cart: cartReducer,
-  })
+
+  });
   const store = createStore(reducers);
 
   test('provides initial state', () => {
     let state = store.getState();
 
     expect(state.cart.length).toEqual(0);
+
     expect(state).toBeTruthy();
   });
   test('adds and removes products', () => {
@@ -26,8 +28,10 @@ describe('Cart reducer', () => {
     let newState = store.getState();
 
     expect(newState.cart.length).toEqual(2);
+
     expect(newState.cart[0].name).toEqual('product one');
     expect(newState.cart[1].name).toEqual('product two');
+
 
     store.dispatch(removeItem(productOne));
     let newestState = store.getState();

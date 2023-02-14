@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getCategories, selectCategory } from '../../store/actions';
+import { getCategories, selectCategory } from '../../store/categories';
 import { Button, ButtonGroup } from '@mui/material';
-import { useEffect } from 'axios';
+import { useEffect } from 'react';
 
 
-const Categories = (props) => {
+const Categories = () => {
   const dispatch = useDispatch();
   const { categories } = useSelector(state => state.category);
 
@@ -17,13 +17,11 @@ const Categories = (props) => {
     <>
       <ButtonGroup variant="text" aria-label="text button group">
         {categories.map((category, index) => (
-          <Button key={`categories-${index}`} onClick={() => dispatch(selectCategory(category.name))}>{category.name}</Button>
+          <Button data-testid={`category-${index}`} key={`category-${index}`} onClick={() => dispatch(selectCategory(category.name))}>{category.name}</Button>
         ))}
       </ButtonGroup>
     </>
   )
 };
-
-
 
 export default Categories;

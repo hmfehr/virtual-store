@@ -1,9 +1,7 @@
-
-
 const Footer = () => {
   return(
     <>
-     <p >&copy2023; Hunter Fehr</p>
+     <p >&copy;2023 Hunter Fehr</p>
     </>
   )
 }

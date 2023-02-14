@@ -1,20 +1,20 @@
-// import { Button, Card } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import {Button, Card } from '@mui/material';
+import { Button, Card, CardActions, CardMedia, Typography } from '@mui/material';
 import { addItem } from '../../store/cart';
 import { adjustInventory, getProducts } from '../../store/products';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './styles.scss';
 
 const Products = () => {
   const dispatch = useDispatch();
   const { products } = useSelector(state => state);
   const { activeCategory } = useSelector(state => state.category);
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(getProducts());
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const renderList = products.filter(product => product.category === activeCategory)
 
@@ -25,19 +25,25 @@ const Products = () => {
 
   return (
     <>
-      {activeCategory && renderList.map((product, index) => (
-        <Card
-          data-testid={`product-${index}`}
-          key={`product-${index}`}
-          variant='outlined'>
-            {product.name}
-            <img style={{width: '30%'}} alt={product.name} src={`https://source.unsplash.com/random?${product.name}`} />
-
-            <Button variant="text" onClick={() => handler(product)}>Add Item</Button>
-            <Button component={Link} to={`/product/${product._id}`} variant="text" onClick={() => handler(product)}>View Details</Button>
-
-        </Card>
-      ))}
+      <div className='cardContainer'>
+        {activeCategory && renderList.map((product, index) => (
+          <Card sx={{ width: 200, height: 300 }}>
+            <CardMedia
+              component='img'
+              alt='product'
+              height='170'
+              image={`https://source.unsplash.com/random?${product.name}`}
+            />
+            <Typography className='productName'>
+              {product.name}
+            </Typography>
+            <CardActions className='links'>
+              <Button variant="text" onClick={() => handler(product)}>Add Item</Button>
+              <Button component={Link} to={`/product/${product._id}`} variant="text">Details</Button>
+            </CardActions>
+          </Card>
+        ))}
+      </div>
     </>
   )
 };

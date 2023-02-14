@@ -1,0 +1,21 @@
+.cardContainer{
+  margin-top: 8vh;
+  margin-bottom: 10vh;
+  margin-left: 28.5vw;
+  display: flex;
+  gap: 10vw;
+}
+
+.productName{
+  text-align: left;
+  font-size: 2rem;
+  padding-left: 2vw;
+  padding-top: 2.5vh;
+  font-weight: bolder;  
+}
+
+.links{
+  margin-top: 6vh;
+  display: flex;
+  justify-content: space-evenly;
+}

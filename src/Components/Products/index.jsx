@@ -1,8 +1,10 @@
 // import { Button, Card } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import {Button, Card } from '@mui/material';
-import { addItem, getProducts, adjustInventory } from '../../store/actions'
+import { addItem } from '../../store/cart';
+import { adjustInventory, getProducts } from '../../store/products';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -29,7 +31,11 @@ const Products = () => {
           key={`product-${index}`}
           variant='outlined'>
             {product.name}
+            <img style={{width: '30%'}} alt={product.name} src={`https://source.unsplash.com/random?${product.name}`} />
+
             <Button variant="text" onClick={() => handler(product)}>Add Item</Button>
+            <Button component={Link} to={`/product/${product._id}`} variant="text" onClick={() => handler(product)}>View Details</Button>
+
         </Card>
       ))}
     </>

@@ -1,0 +1,70 @@
+.title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.card{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+}
+
+.carWords{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75vh;
+}
+
+.cardStock{
+  color: rgb(118, 118, 118);
+  font-size: 1.25rem;
+}
+
+.buyButton{
+  font-size: 0.85rem;
+  left: 34.25vw;
+  width: 29.25vw;
+  height: 4.5vh;
+  margin-bottom: 1vh;
+}
+
+.relatedItems{
+  padding-top: 1vh;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1.5vh;
+}
+
+.suggestions{
+  padding-top: 1vh;
+  margin-left: 34.25vw;
+  display: flex;
+}
+
+.suggestionsCard{
+  text-align: center;
+  width: 7.75vw;
+  padding: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .5rem;
+}
+
+.productDetails{
+  padding-top: 2vh;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.accordion{
+  margin-top: 2vh;
+  width: 29.25vw;
+  margin-left: 34.25vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .5rem;
+  margin-bottom: 18vh;
+}
+

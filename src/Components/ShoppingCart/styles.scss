@@ -1,0 +1,69 @@
+.cartCard {
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vh;
+  width: 50vw;
+  height: 75vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.orderData {
+  margin-top: 1vh;
+  margin-left: 2.6vw;
+}
+
+.deleteItem{
+  position: right;
+  left: auto;
+  right: auto;
+
+}
+
+ul{
+  height: 12vh;
+  background-color: white;
+  overflow-y: auto;
+}
+
+li{
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body,ul{
+  margin: 0;
+}
+
+.textField{
+  margin: auto;
+  width: 17vw;
+  height: 6vh;
+}
+
+.billingFeilds{
+  margin-left: 1.4vw;
+}
+
+.paymentDetails{
+  margin-right: 1.4vw;
+}
+
+.rightColumn{
+  margin-bottom: 2.8vh;
+}
+
+.formWrapper{
+  margin-top: -5vh;
+  margin-left: 2vw;
+  display: flex;
+}
+
+.button{
+  margin-top: -1vh;
+  margin-left: auto;
+  margin-right: auto;
+}

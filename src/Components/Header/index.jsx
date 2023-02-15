@@ -16,7 +16,7 @@ const Header = () => {
       <header>
         <div className='buttonGroupHeader'>
           <Button className='ourStoreButton'>
-            <Link className='ourStore' to="/" default>OUR STORE</Link>
+            <Link className='ourStore' to="/" default>Takeaway Vitrual Store</Link>
           </Button>
           <Button className='cartButton'>
             <Link className="cart" to="/cart">Cart({totalQuantity}) </Link>

@@ -29,18 +29,8 @@ const cartSlice = createSlice({
         }
       }
     },
-    // incrementCount: (state) => {
-    //   state.count = state.count + 1;
-    // },
-    // decrementCount(state) {
-    //   state.count = state.count - 1;
-    // },
-    // resetCount(state) {
-    //   state.count = 0;
-    // },
   }
 });
-
 
 export const { addItem, removeItem, incrementCount, decrementCount, resetCount } = cartSlice.actions;
 export default cartSlice.reducer;

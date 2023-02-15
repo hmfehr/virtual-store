@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { adjustInventory, getProducts } from '../../store/products';
 import { addItem } from '../../store/cart';
 import { Accordion, AccordionDetails, AccordionSummary, Button, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './styles.scss';
 
 const ProductDetails = () => {
@@ -47,7 +47,7 @@ const ProductDetails = () => {
       </div>
       <Typography className='productDetails'>Product Details</Typography>
       <div className='accordion'>
-        <Accordion>
+        {/* <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}
             aria-controls='pannel-1acontent'
             id='pannel1aHeader'>
@@ -70,7 +70,7 @@ const ProductDetails = () => {
           <AccordionDetails>
             <Typography>A List of Reviews.</Typography>
           </AccordionDetails>
-        </Accordion>
+        </Accordion> */}
       </div>
     </>
   )

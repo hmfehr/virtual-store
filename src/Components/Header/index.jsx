@@ -5,6 +5,12 @@ import './styles.scss';
 
 const Header = () => {
   const { cart } = useSelector(state => state);
+
+  let totalQuantity = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalQuantity += cart[i].count;
+  }
+
   return (
     <>
       <header>
@@ -13,7 +19,7 @@ const Header = () => {
             <Link className='ourStore' to="/" default>OUR STORE</Link>
           </Button>
           <Button className='cartButton'>
-            <Link className='cart' to="/cart">Cart ({cart.length})</Link>
+            <Link className="cart" to="/cart">Cart({totalQuantity}) </Link>
           </Button>
         </div>
       </header>

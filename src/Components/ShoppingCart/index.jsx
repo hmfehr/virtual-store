@@ -25,10 +25,10 @@ const ShoppingCart = () => {
     if (typeof current.price !== 'number' || isNaN(current.price)) {
       return accumulator;
     }
-    console.log(current);
-    return accumulator + (parseFloat(current.price));
-  }, initialValue);
+    return accumulator + (parseFloat(current.price) * current.count);
+  }, initialValue).toFixed(2);
   
+  const formattedTotal = parseFloat(total).toFixed(2);
 
   return (
     <>
@@ -41,10 +41,11 @@ const ShoppingCart = () => {
             <When condition={cart.length > 0}>
               <div className="simple-cart">
                 <ul>
-                  {cart?.map((product, index) => (
-                    <li key={`cart-${index}`} id={product.id}>{product.name}
-                      {` ${product.price}`}
-                      <Button className='deleteItem' color='error' variant='text' onClick={() => dispatch(removeItem(product))}>Remove item</Button>
+                  {cart.map((product, index) => (
+                    <li key={`cart-${index}`}>
+                      {product.name} x {product.count}
+                      {` $${(parseFloat(product.price) * product.count).toFixed(2)}`}
+                      <Button className="delete-item" color='error' onClick={() => dispatch(removeItem(product))}>Remove</Button>
                     </li>
                   ))}
                 </ul>
@@ -52,7 +53,7 @@ const ShoppingCart = () => {
             </When >
           </Typography>
           <Typography variant='subtitle1' component='div'>
-            Total: {total}
+            Total: {formattedTotal}
           </Typography>
         </CardContent>
         <CardContent className='formWrapper'>

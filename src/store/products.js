@@ -9,7 +9,7 @@ const productsSlice = createSlice({
   reducers: {
     setProducts: (state, action) => action.payload,
     updateProduct: (state, action) => state.map(product => (
-      product.name !== action.payload.name ? product : action.payload
+      product._id !== action.payload._id ? product : action.payload
       )),
   }
 })

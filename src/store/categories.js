@@ -19,7 +19,7 @@ const categoriesSlice = createSlice({
 export const { setCategories, selectCategory } = categoriesSlice.actions;
 
 export const getCategories = () => async (dispatch, getState) => {
-  let response = await axios.get('http://api-js401.herokuapp.com/api/v1/categories');
+  let response = await axios.get('https://api-js401.herokuapp.com/api/v1/categories');
   dispatch(setCategories(response.data.results));
 };
 

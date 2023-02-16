@@ -28,9 +28,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --verbose --coverage",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "netlify deploy --prod",
-    "postdeploy": "echo 'your route is deployed'"
   },
   "eslintConfig": {
     "extends": [

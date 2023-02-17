@@ -6,17 +6,15 @@ import './styles.scss';
 const Header = () => {
   const { cart } = useSelector(state => state);
 
-  let totalQuantity = 0;
-  for (let i = 0; i < cart.length; i++) {
-    totalQuantity += cart[i].count;
-  }
+  const totalQuantity = cart.reduce((acc, item) => acc + item.count, 0);
+
 
   return (
     <>
       <header>
         <div className='buttonGroupHeader'>
           <Button className='ourStoreButton'>
-            <Link className='ourStore' to="/" default>Takeaway Vitrual Store</Link>
+            <Link data-testid='headerTest' className='ourStore' to="/" default>Takeaway Vitrual Store</Link>
           </Button>
           <Button className='cartButton'>
             <Link className="cart" to="/cart">Cart({totalQuantity}) </Link>

@@ -32,9 +32,9 @@ const ShoppingCart = () => {
 
   return (
     <>
-      <Card className='cartCard'>
+      <Card style={{backgroundColor: "#f8ede7"}} variant="outlined" className='cartCard'>
         <CardContent className='orderData'>
-          <Typography variant='h6'>
+          <Typography mb='2vh' variant='h6'>
             Order Summary
           </Typography>
           <Typography>
@@ -52,7 +52,7 @@ const ShoppingCart = () => {
               </div>
             </When >
           </Typography>
-          <Typography variant='subtitle1' component='div'>
+          <Typography mt='1vh' variant='subtitle1' component='div'>
             Total: {formattedTotal}
           </Typography>
         </CardContent>

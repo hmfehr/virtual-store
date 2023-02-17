@@ -9,13 +9,15 @@
 .productName{
   text-align: left;
   font-size: 2rem;
-  padding-left: 2vw;
-  padding-top: 2.5vh;
+  padding-left: 1.5vw;
+  padding-top: 2.75vh;
   font-weight: bolder;  
 }
 
 .links{
-  margin-top: 6vh;
+  margin-top: 3vh;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  font-size: .75rem;
 }
+

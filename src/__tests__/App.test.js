@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import App from '../App';
 import store from '../store';
 
-describe('App intergration', () => {
+describe('App integration', () => {
   test('renders products as expected', () => {
     render(
       <Provider store={store}>
@@ -13,8 +13,8 @@ describe('App intergration', () => {
     );
 
     let electronics = screen.getByTestId('category-0');
-    let food = screen.getAllByTestId('category-1');
-    let clothing = screen.getAllByTestId('categore-2');
+    let food = screen.getByTestId('category-1');
+    let clothing = screen.getByTestId('category-2');
 
     expect(electronics).toHaveTextContent('Electronics');
     expect(food).toHaveTextContent('Food');
@@ -23,10 +23,9 @@ describe('App intergration', () => {
     fireEvent.click(electronics);
     let tv = screen.getByTestId('product-0');
     let radio = screen.getByTestId('product-1');
-
     expect(tv).toHaveTextContent('TV');
     expect(radio).toHaveTextContent('Radio');
 
+
   })
 })
-

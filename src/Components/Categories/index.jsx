@@ -19,7 +19,7 @@ const Categories = () => {
     <h4 className='categories'>Browse Our Categories</h4>
       <ButtonGroup variant="text" aria-label="text button group">
         {categories.map((category, index) => (
-          <Button data-testid={`category-${index}`} key={`category-${index}`} onClick={() => dispatch(selectCategory(category.name))}>{category.name}</Button>
+          <Button style={{color: "#b32f2f"}} data-testid={`category-${index}`} key={`category-${index}`} onClick={() => dispatch(selectCategory(category.name))}>{category.name}</Button>
         ))}
       </ButtonGroup>
     </>

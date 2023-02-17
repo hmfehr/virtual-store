@@ -27,7 +27,7 @@ const Products = () => {
     <>
       <div className='cardContainer'>
         {activeCategory && renderList.map((product, index) => (
-          <Card sx={{ width: 200, height: 300 }}>
+          <Card style={{backgroundColor: "#de9494"}} sx={{ width: 200, height: 300 }}>
             <CardMedia
               component='img'
               alt='product'
@@ -38,8 +38,8 @@ const Products = () => {
               {product.name}
             </Typography>
             <CardActions className='links'>
-              <Button variant="text" onClick={() => handler(product)}>Add Item</Button>
-              <Button component={Link} to={`/product/${product._id}`} variant="text">Details</Button>
+              <Button variant="#fbc02d" onClick={() => handler(product)}>Add Item</Button>
+              <Button component={Link} to={`/product/${product._id}`} variant="#fbc02d">Details</Button>
             </CardActions>
           </Card>
         ))}

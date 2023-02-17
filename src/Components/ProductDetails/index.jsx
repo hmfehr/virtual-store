@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { adjustInventory, getProducts } from '../../store/products';
 import { addItem } from '../../store/cart';
-import {  Accordion, AccordionDetails, AccordionSummary, Button, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Button, Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import './styles.scss';
 
@@ -25,7 +25,7 @@ const ProductDetails = () => {
   return (
     <>
       {theProduct && <h1 className='title'>{theProduct.name}</h1>}
-      <Card className='card' sx={{ maxWidth: 280 }}>
+      <Card className='card' sx={{ maxWidth: 280 }} style={{ backgroundColor: "#de9494" }}>
         <CardActionArea>
           <CardMedia
             component='img'
@@ -38,36 +38,36 @@ const ProductDetails = () => {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Button className='buyButton' variant='contained' onClick={() => handler(theProduct)}>Buy</Button>
+      <Button className='buyButton' color='warning' variant='contained' onClick={() => handler(theProduct)}>Buy</Button>
       <Typography className='relatedItems'>Related Items</Typography>
       <div className='suggestions'>
-        <Card className='suggestionsCard'>Suggestion 1</Card>
-        <Card className='suggestionsCard'>Suggestion 2</Card>
-        <Card className='suggestionsCard'>Suggestion 3</Card>
+        <Card className='suggestionsCard' style={{ backgroundColor: "#de9494" }}>Suggestion 1</Card>
+        <Card className='suggestionsCard' style={{ backgroundColor: "#de9494" }}>Suggestion 2</Card>
+        <Card className='suggestionsCard' style={{ backgroundColor: "#de9494" }}>Suggestion 3</Card>
       </div>
       <Typography className='productDetails'>Product Details</Typography>
       <div className='accordion'>
         <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}
+          <AccordionSummary style={{backgroundColor: "#de9494"}} expandIcon={<ExpandMoreIcon />}
             aria-controls='pannel-1acontent'
             id='pannel1aHeader'>
-            <Typography>
+            <Typography >
               Specifications
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails style={{backgroundColor: "#f8ede7"}}>
             <Typography>Product Specs.</Typography>
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}
+          <AccordionSummary style={{backgroundColor: "#de9494"}} expandIcon={<ExpandMoreIcon />}
             aria-controls='pannel-2acontent'
             id='pannel2aHeader'>
             <Typography>
               User Reviews
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails style={{backgroundColor: "#f8ede7"}}>
             <Typography>A List of Reviews.</Typography>
           </AccordionDetails>
         </Accordion>

@@ -1,4 +1,4 @@
-$background: #f5f5f5;
+$background: #b32f2f;
 
 header {
   background-color: $background;
@@ -17,7 +17,9 @@ header {
 }
 
 .ourStoreButton{
-
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-weight: bold;
+font-style: italic;
 }
 
 .ourStore{
@@ -30,13 +32,8 @@ header {
   margin-left: 1vw;
 }
 
-.cartButton{
-
-}
-
 .cart{
   text-decoration: none;
   color: black;
-  font-size: 0.45rem;
-  
+  font-size: 0.45rem;  
 }
